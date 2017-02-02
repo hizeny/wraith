@@ -9,8 +9,8 @@ class Wraith::CompareImages
   include Logging
   attr_reader :wraith
 
-  def initialize(config)
-    @wraith = Wraith::Wraith.new(config)
+  def initialize(config, yaml_passed = false)
+    @wraith = Wraith::Wraith.new(config, { yaml_passed: yaml_passed })
   end
 
   def compare_images
